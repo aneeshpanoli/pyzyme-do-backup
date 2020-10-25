@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <title>Pyzyme.com</title>
+  <link rel="stylesheet" href='{% static 'css/index.css' %}' />
+  <script type="text/javascript" src="{% static 'js/authorgenetable.js' %}"></script>
+
+</head>
+
+<body>
+  <div id="container">
+
+    {% include "index/header.html" %}
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <div id="boxLeft" class='rslt-box'>
+        <h3>Pubmed Search</h3>
+        <form id="formp" method='POST' action='.'> {% csrf_token %}
+          <!-- <input name='url' type='text' placeholder='Enter a keyword to begin' /> -->
+          {{ form }}
+
+          <div class="tooltip button" > ?
+            <span class="tooltiptext">To search genes type gene name.
+              To make gene search organism-specific add organism name as the last parameter
+              (eg: To retrieve data on Atmnd1 in Arabidopsis type "Atmnd1 arabidopsis".
+              Search terms are case insensitive). You can also search process terms
+              (eg: Type "Meiosis Arabidopsis" to get info on all genes related to meiosis.
+              The search doesn't look for putative genes but only published ones)</span></div>
+
+              <!-- <div class="g-recaptcha" data-sitekey="6Le0iBUUAAAAACjXRNYBTwAkpVAzo5orIq3zrtHO"></div> -->
+              <input class="button" type='submit' name='searchform' value='SUBMIT' maxlength='50'/>
+            </form>
+
+          </div>
+
+          <div id="boxTop" class='innerhori3'>
+            <!--<p id='message'>
+            <form name="gene_detail" method="post" action="http://www.pyzyme.com/testpAgHm/" target="_blank"> {% csrf_token %}
+            <button id="inputbutton" name='geneName' value='{{ geneName }}' type="submit">Click here to see the Heat Map</button>
+          -->
+          <!-- <input type="hidden" name='geneName' value= "{{ geneName }}" />
+          <input type="submit" name='geneName' value="Show me the heatmap instead"/> -->
+          <!--
+        </form>
+      </p>
+    -->
+    <button class="button" name='geneName' onclick="toggleAuthorTable()" >Influential Authors</button>
+    <button class="button" name='geneName' onclick="toggleGeneTable()" >Genes Associated With the keyword</button>
+    <!---this is author table----------->
+    <table summary="Influential Authors" id="authortable" style="display:none">
+      <thead>
+        <tr>
+          <th id="tableRowA1">Name</th>
+          <th id="tableRowA1">Article Count  </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {% for x in datalist %}
+          <td id="tableRowA" class='button'>
+            <a id ="link" href="https://www.google.com/search?q={{ x.author}} lab" target="_blank">{{ x.author }}</a></td>
+            <td id="tableRowA">{{ x.a_count}}</td>
+          </tr>
+          {% endfor %}
+          <tbody>
+          </table>
+          <!---this is gene table----------->
+          <table summary="Important Genes" id="genetable">
+            <thead>
+              <tr>
+                <th id="tableRowG1">Gene  </th>
+                <th id="tableRowG1">Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {% for x in datalist %}
+                <td id="tableRowG" class='button'>
+                  <a id="link" href="https://www.ncbi.nlm.nih.gov/gene/?term={{ x.gene }}" target="_blank">{{ x.gene }} </a></td>
+                  <td id="tableRowG">{{ x.g_count }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+
+
+            <div id="boxTop" class='boxes'>
+              <p>
+                {{post_dtails}}
+              </p>
+            </div>
+
+      </div>
+
+      <div id="innerhori3">
+
+        {% include "index/footer.html" %}
+          </div>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <!-- <script src="{% static 'js/changeOneRandomDivColor.js' %}"></script> -->
+        <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/loopfade.js' %}"></script>
+        </body
+        </html>

@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link rel="icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+    <meta charset="utf-8" />
+
+    <title>Pyzyme.com</title>
+
+<!-- CSS style sheets -->
+<style>
+
+body {
+  margin: 0;
+  min-width: 960px;
+  cursor:crosshair;
+}
+
+rect {
+  fill: none;
+  pointer-events: all;
+}
+
+circle {
+  fill: red;
+  stroke-width: 2.0px;
+}
+
+</style>
+
+  </head>
+
+  <body>
+<div id ='main'></div>
+<div float='center'>
+  <script src="{% static 'scriptj/d3_4.js' %}"></script>
+  <script src="{% static 'scriptj/loading.js' %}"></script>
+<footer id="bottomfooter">Copyright pyzyme.com 2017</footer>
+</div>
+</body>
+
+
+</html>

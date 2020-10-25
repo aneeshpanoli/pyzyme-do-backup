@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <title>Pyzyme.com</title>
+  <link rel="stylesheet" href='{% static 'css/index.css' %}' />
+
+</head>
+
+<body>
+  <div id="outer">
+  {% include "index/header.html" %}
+<div id="innerhori1"><h2> Blog </h2></div>
+<div id="innerhori1">
+  <div id="blogindex">
+    <h3>Python</h3>
+    <p> </p>
+
+  </div>
+  <div id="blogindex">
+    <h3> Genome Editing</h3>
+    <a href="http://www.pyzyme.com/blog/1"><p>A bright future</p></a>
+      <a href="http://www.pyzyme.com/blog/3"><p>Gene Editing</p></a>
+  </div>
+  <div id="blogindex">
+    <h3>Plant Breeding</h3>
+    <p></p>
+  </div>
+  <div id="blogindex">
+    <h3>News</h3>
+    <p></p>
+</div>
+</div>
+  <div id="innerhori3">
+
+
+  </div>
+    {% include "index/footer.html" %}
+  </div>
+</body
+</html>

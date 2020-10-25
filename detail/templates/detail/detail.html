@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <html lang="en">
+  <meta charset="utf-8" />
+  <title>Pyzyme.com</title>
+  <link rel="stylesheet" href='{% static 'css/home.css' %}' />
+
+
+</head>
+
+<body>
+  <div id="outer">
+  {% include "index/header.html" %}
+<!-- main block -->
+<div style="width:100%">
+
+
+<div >
+  <h2><a href='http://www.pyzyme.com'>+ New Search </a></h2>
+</div>
+
+<div >
+    <h2>{{ newurl }}</h2>
+</div>
+{% include "index/footer.html" %}
+</div>
+</body>
+</html>

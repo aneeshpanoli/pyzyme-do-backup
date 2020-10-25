@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <title>Pyzyme.com</title>
+  <link rel="stylesheet" href='{% static 'css/index.css' %}' />
+  <link rel="stylesheet" href='{% static 'css/tip_d3.css' %}' />
+  <script> var csvFolder = '{% static 'csv/stockmarket/' %}'</script>
+  <script> var stockTickr = '{{ tickr }}' </script>
+  <script src='{% static 'js/d3_4.js' %}'></script>
+  <script src='{% static 'js/tip_d3.js' %}'></script>
+  <script src='{% static 'js/techan_min.js' %}'></script>
+  <!-- <script src='{% static 'scriptj/stockChart.js' %}'></script> -->
+  <script src='{% static 'js/stockBubble.js' %}'></script>
+  <script src='{% static 'js/candleStick.js' %}'></script>
+
+
+</head>
+
+<body>
+  <div id="container">
+
+    {% include "index/header.html" %}
+    <!-- this is the form -->
+
+    <div id="boxLeft">
+      <form id="formp" method='POST' action='.'> {% csrf_token %}
+        <!-- <input name='url' type='text' placeholder='Enter a keyword to begin' /> -->
+        {{ form }}
+
+        <div class="tooltip button" > ?
+          <span class="tooltiptext">Enter stock ticker 'aapl' for Apple Inc and number of days you would like to analyse</span></div>
+          <!-- <div class="g-recaptcha" data-sitekey="6Le0iBUUAAAAACjXRNYBTwAkpVAzo5orIq3zrtHO"></div> -->
+          <input calss ='button' type='submit' value='SUBMIT' maxlength='50'/>
+        </form>
+        <div id="formp">
+          <button class="button"  onclick= 'bubbleChart()' theme="testButton">Bubble Chart</button>
+          <button class="button" onclick= 'waffleChart()'>Waffle Chart</button>
+          <button class="button" onclick= 'upMove()'>Show Upmoves</button>
+          <button class="button" onclick= 'downMove()'>Show down moves</button>
+          <button class="button" onclick= 'candlestickChart()'>Chart</button>
+          <button class="button" onclick= ''>Fundamentals</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id='chart' style="align-content:center">
+
+    </div>
+
+    <div id="innerhori3">
+      {% include "index/footer.html" %}
+
+    </div>
+  </div>
+</body>
+</html>

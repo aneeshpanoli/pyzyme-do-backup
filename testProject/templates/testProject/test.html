@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+      <title>Pyzyme.com</title>
+      <link rel="stylesheet" href='{% static 'css/home.css' %}' />
+      <script src="{% static 'scriptj/d3_4.js' %}"></script>
+
+
+</head>
+
+<body>
+  <div id="outer">
+  <div>
+
+  <header id="mainheader"><h1> Pyzyme.com </h1></header></div>
+<!-- main block -->
+<button id="clickr" theme="testButton">click me</button>
+  <script>
+  var dataTest = [123, 345, 236, 45, 278, 325, 456, 234];
+    var canvas = d3.select("#outer") //svg canvas
+                .append("svg")
+                .attr("width", 600)
+                .attr("height", 500);
+    var bars = canvas.selectAll("rect") //select if present, else create new
+                .data(dataTest)  // where is the data coming from
+                .enter() // returns rect elements for each datapoint
+                  .append("rect")
+                  .attr("width", function(d){ //d stands for each elemt in thearray
+                      return d;
+                  })
+                  .attr("height", 25)
+                  .attr("percent", 40)
+                  .attr("fill", "red")
+                  .attr("y", function(d, i) { return i * 30});
+
+        d3.select('#clickr').on('click', function(d) {
+          var percents = canvas.selectAll("rect[percent = '40']")
+                  .attr("fill", "orange")
+                  console.log(percents)
+
+        } )
+
+  </script>
+
+
+<div>
+
+
+<footer id="bottomfooter">Copyright pyzyme.com 2017</footer>
+</div>
+</div>
+
+
+</body>
+</html>

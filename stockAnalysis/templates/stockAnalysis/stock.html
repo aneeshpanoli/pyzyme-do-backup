@@ -1,0 +1,37 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <html lang="en">
+  <meta charset="utf-8" />
+  <title>Pyzyme.com</title>
+  <link rel="stylesheet" href='{% static 'css/home.css' %}' />
+  <link rel="stylesheet" href='{% static 'css/tip_d3.css' %}' />
+  <script> var csvFolder = '{% static 'historicData/' %}'</script>
+  <script> var stockTickr = '{{ tickr }}' </script>
+</head>
+
+<body>
+  <div id="outer">
+  <header id="mainheader"><h1> Pyzyme.com </h1></header>
+<!-- main block -->
+<div style="width:100%">
+
+<div id='chart'>
+
+</div>
+
+<div >
+<h2></h2>
+</div>
+<footer id="bottomfooter">Copyright pyzyme.com 2017</footer>
+
+<script src='{% static 'scriptj/d3_4.js' %}'></script>
+<script src='{% static 'scriptj/tip_d3.js' %}'></script>
+<!-- <script src='{% static 'scriptj/stockChart.js' %}'></script> -->
+<script src='{% static 'scriptj/stockBubble.js' %}'></script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <title>Pyzyme, LLC</title>
+  <link rel="stylesheet" href='{% static 'css/index.css' %}' />
+
+</head>
+
+<body>
+  <div id="outer">
+  {% include "index/header.html" %}
+    <div id="blogbox">
+      <h3>Disclaimer</h3>
+<p>     Pyzyme, LLC regularly monitors and updates the information on this website. Whilst
+I try out best to ensure that the information on this website is correct, I do not
+warrant its completeness or accuracy. Should you identify any inaccuracies on this
+website, you are requested to notify the web editors by email, clearly indicating
+the relevant page.</p><br />
+
+<p>All materials on this website are for educational purposes only.</p><br />
+
+<p>No rights can be derived from the information contained in the Pyzyme, LLC
+website. The website may contain links to websites of third party organisations.
+Pyzyme, LLC cannot be held responsible for any consequences arising from
+the use of information obtained from these websites.</p><br />
+
+<p>The information on this website, text as well as images, is and remains the property
+of Pyzyme, LLC, unless otherwise stated.</p><br />
+
+<p>Cookies:
+The Pyzyme, LLC website uses ‘cookies’, small text files that are
+stored on your computer. These cookies enable us to monitor visitor statistics via
+Google Analytics, Google’s web analysis service. Pyzyme, LLC does not use this
+data to track individual visitors, but to gain a general impression of the number
+of visitors to the website, the pages most frequently visited, the kind of search
+requests, etc. With this information Iare then able to make improvements to our
+website where necessary.</p><br />
+
+<p>If you do not wish to accept any cookies, please block them in
+the settings for your internet browser.</p>
+
+  </div>
+
+
+  <div id="innerhori1">
+
+  </div>
+
+
+  <div id="innerhori3">
+    {% include "index/footer.html" %}
+  </div>
+</body
+</html>

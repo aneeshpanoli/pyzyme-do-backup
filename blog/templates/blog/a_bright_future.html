@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <title>Pyzyme.com</title>
+  <link rel="stylesheet" href='{% static 'css/index.css' %}' />
+
+</head>
+
+<body>
+  <div id="outer">
+    {% include "index/header.html" %}
+    <div id="innerhori1">
+      <div id="blogbox">
+        <h3>A Bright Future Ahead</h3>
+        <p id="blogp">
+          Computer science has been making enormous progress in the areas of artificial intelligence and machine learning over the past decade. The story is not different in biology either. The hottest field is the realm of genome editing. Advancement in this area has reached a stage where the dream of perfect human is no longer a far-fetched dream.
+        </p>
+        <p id="blogp">
+          The scientists are not eager to take it that far too quickly becasue as the old adage says “power comes with responsibility”, there are looming ethical concerns. However, since that is not the primary goal of this article, we will leave it for a later time. The front-runner is CRISPER-Cas9 mediated genome editing. The system initially had the problem of nonspecificity but over the last couple of years the edges has been smoothened out to achieve absolute specificity. This will allow more targetted research to study human disorders using primate models. So far scientists were using  our mamalian kin mouse to study human disorders, because generating primate mutants by randon mutagenesis is extremily tedious and there are concerns of animal safety.
+        </p>
+        <img src="{% static 'media/img/Macaca_sinica_aurifrons_-_Wetzone_subspecies.jpg'%}" alt="Macaque Monkey">
+        <p id="blogp">
+
+          The mention of computer science in the beginning was intentional. Yes, now we are at a stage where we can programmatically solve biological problems with the help of machine learning. As we know there are only finite number of genes and processes in a living system, which means we can hardcode the functioning of the biological system. Most of the variability had been attributed to the gene expression levels. As we continue to study more diseases and people we should be able to precisely calculate the amount of each protein required for the normal functioning of a tissue or cell.
+        </p>
+          <p id="blogp">
+          Then we can hardcode the data. Programming languages like python are extremely popular among the scientific community, also it extremely good at tasks that we intend to achieve.
+        </P>
+          <p id="blogp">
+          Imagine a system where you type in cancer and it lights up all the affected nodes in the system, so that we can specifically address those issues using targeted approaches (add CRISPR here) to remedy the situation. An even better scenario - you type in the result of a medical test and the system precisely tells you what is going on in a patient’s body.  Side-load the concept of immortality (I meant to say, delayed ageing) to this mix and you will see clearly where I am going with this.
+          </P>
+          <p id="blogp">
+          The era of personalized medicine will be here before you know it.
+
+          Think about the arrival of a new machine in your closet, just like your TV. You fire up this machine and analyse a drop of blood from your fingertip- the machine prints out a code- you take it to the pharmacy- your problem solved – then take a shot on your arm. you don’t need doctor. You are free of illness/diseases.
+
+          The first company that effectively impliments this process will be the most successful one ever to operate on this planet.
+
+
+
+        </p>
+      </div>
+    </div>
+    <div id="generic"><div id="backtoindex">
+      <p>
+        <a href="http://www.pyzyme.com/blog/"> Back to index</a>
+      </p>
+    </div>
+
+  </div>
+  <div id="disqusbox">
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+    var disqus_config = function () {
+      this.page.url = 'http://www.pyzyme.com/blog/1'; // Replace PAGE_URL with your page's canonical URL variable
+      // this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://www-pyzyme-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+{% include "index/footer.html" %}
+</div>
+</body
+</html>

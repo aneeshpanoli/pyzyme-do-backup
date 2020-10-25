@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <title>Pyzyme.com</title>
+  <link rel="stylesheet" href='{% static 'css/index.css' %}' />
+
+</head>
+
+<body>
+  <div id="container">
+
+    {% include "index/header.html" %}
+    <div id="boxLeft" class='boxes' style="background-image: url(/static/media/img/stockCover.jpg)">
+      <h3>Stock Price Analysis</h3>
+      <p>Data Courtesy: Tiingo</p>
+      <div>
+     <form id="formp" method='POST' action='.'> {% csrf_token %}
+        <!-- <input name='url' type='text' placeholder='Enter a keyword to begin' /> -->
+{{ form }}
+
+          <div class="tooltip button" > ?
+  <span class="tooltiptext">Enter stock ticker 'aapl' for Apple Inc and number of days you would like to analyse</span></div>
+          <!-- <div class="g-recaptcha" data-sitekey="6Le0iBUUAAAAACjXRNYBTwAkpVAzo5orIq3zrtHO"></div> -->
+        <input calss ='button' type='submit' value='SUBMIT' maxlength='50'/>
+    </form>
+
+</div>
+</div>
+
+<div >
+<h2></h2>
+</div>
+<div id="innerhori3">
+{% include "index/footer.html" %}
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <title>Pyzyme.com</title>
+  <link rel="stylesheet" href='{% static 'css/index.css' %}' />
+  <link rel="stylesheet" href='{% static 'css/tip_d3.css' %}' />
+  <script> var csvFolder = '{% static 'csv/stockmarket/' %}'</script>
+  <script> var stockTickr = '{{ tickr }}' </script>
+  <script src='{% static 'js/d3_4.js' %}'></script>
+  <script src='{% static 'js/tip_d3.js' %}'></script>
+  <!-- <script src='{% static 'scriptj/stockChart.js' %}'></script> -->
+  <script src='{% static 'js/stockBubble.js' %}'></script>
+  <script src='{% static 'js/candleStick.js' %}'></script>
+  <script src='{% static 'js/techan_min.js' %}'></script>
+
+</head>
+
+<body background="{% static 'media/img/jarvis.jpg'%}">
+  <div id="container">
+
+  <header id="mainheader"><a href="http://www.pyzyme.com"><div id="headBox"><h1> Pyzyme.com </h1></div></a></header>
+
+ <!-- this is the form -->
+
+ <div id="innerhori1">
+
+ <div id="boxLeft" class='pmed-srch-box'>
+     <form id="formp" method='POST' action='.'> {% csrf_token %}
+        <!-- <input name='url' type='text' placeholder='Enter a keyword to begin' /> -->
+{{ form }}
+
+          <div class="tooltip button" > ?
+  <span class="tooltiptext">Enter stock ticker 'aapl' for Apple Inc and number of days you would like to analyse</span></div>
+          <!-- <div class="g-recaptcha" data-sitekey="6Le0iBUUAAAAACjXRNYBTwAkpVAzo5orIq3zrtHO"></div> -->
+        <input calss ='button' type='submit' value='SUBMIT' maxlength='50'/>
+    </form>
+
+</div>
+</div>
+<div id="boxLeft" style="width:100%">
+  <p>
+    Data courtesy: US Securities and Exchange Commission.
+  </p>
+  <button class="button"  onclick= 'bubbleChart()' theme="testButton">Bubble Chart</button>
+  <button class="button" onclick= 'waffleChart()'>Waffle Chart</button>
+  <button class="button" onclick= 'upMove()'>Show Upmoves</button>
+  <button class="button" onclick= 'downMove()'>Show down moves</button>
+  <button class="button" onclick= 'candlestickChart()'>Chart</button>
+  <button class="button" onclick= ''>Fundamentals</button>
+</div>
+
+<div id='chart'>
+
+</div>
+
+<div >
+<h2></h2>
+</div>
+<div id="innerhori3">
+
+  <footer id="bottomfooter"><h5> <a href="http://www.pyzyme.com/disclaimer">Disclaimer</a></h5></footer>
+  <footer id="bottomfooter2"><h5>Pyzyme.com © 2017</p><p>By continuing to use this site you acknowledge that you have read and understood the disclaimer!</h5></footer>
+
+</div>
+</div>
+</body>
+</html>

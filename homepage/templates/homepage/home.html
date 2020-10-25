@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <title>Pyzyme, LLC</title>
+  <link rel="stylesheet" href='{% static 'css/index.css' %}' />
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+<body >
+  <div id="container">
+    {% include "index/header.html" %}
+    <div id="boxLeft" class='boxes' style="background-image: url(/static/media/img/genesearchCover.png)">
+      <h3>Gene-association Search</h3>
+      <p>Data Courtesy: Pubmed</p>
+      <div>
+        <form id="formp" method='POST' action='.'> {% csrf_token %}
+          <!-- <input name='url' type='text' placeholder='Enter a keyword to begin' /> -->
+          {{ form }}
+
+          <div class="tooltip button" > ?
+            <span class="tooltiptext">To search genes type gene name.
+              To make gene search organism-specific add organism name as the last parameter
+              (eg: To retrieve data on Atmnd1 in Arabidopsis type "Atmnd1 arabidopsis".
+              Search terms are case insensitive). You can also search process terms
+              (eg: Type "Meiosis Arabidopsis" to get info on all genes related to meiosis.
+              The search doesn't look for putative genes but only published ones)</span></div>
+              <!-- <div class="g-recaptcha" data-sitekey="6Le0iBUUAAAAACjXRNYBTwAkpVAzo5orIq3zrtHO"></div> -->
+              <input class="button" type='submit' name='searchform' value='SUBMIT' maxlength='50'/>
+            </form>
+
+          </div>
+
+        </div>
+
+
+
+        <div id="innerhori3">
+
+          {% include "index/footer.html" %}
+
+        </div>
+      </div>
+    </body>
+    </html>

@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link rel="icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+    <meta charset="utf-8" />
+
+    <title>Pyzyme.com</title>
+
+<!-- CSS style sheets -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato"/>
+    <link rel="stylesheet" href='{% static 'css/heatmap.css' %}' />
+    <!-- <link rel="stylesheet" href='{% static 'css/alertify.css' %}' />
+    <link rel="stylesheet" href='{% static 'css/alertify.default.css' %}' /> -->
+
+
+  </head>
+
+  <body>
+
+  <div id="outer">
+  {% include "index/header.html" %}
+      <div id="innerhoribc">
+        <div id='message'>
+             <h2>{{newurl}}</h2>
+        </div>
+
+        <div id="chart" ></div>
+
+ <!-- D3 variables -->
+        <script> var yearsJson = {{years|safe}}; </script>
+        <script> var geneDataJson = {{geneNum|safe}}; </script>
+
+<!-- third part js libraries -->
+        <script src="{% static 'js/d3_4.js' %}"></script>
+        <!-- <script src="{% static 'scriptj/alertify.js' %}"></script> -->
+
+<!-- Own js modules -->
+        <script src="{% static 'js/bubchartJson.js' %}"></script>
+        <!-- <script>
+        function getid(obj) {
+                    alertify.set({ delay: 4000 });
+                    alertify.log(obj.id);
+                }
+        </script> -->
+
+
+
+        </div>
+        {% include "index/footer.html" %}
+      </div>
+  </body>
+
+</html>

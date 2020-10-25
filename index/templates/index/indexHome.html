@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="-5h7w6mxP9grxonriD2sujngr39rA2eCjb2Pn60gcjk" />
+  <link rel="icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'media/pyzymeIco.ico'%}" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <title>PYZYME - GAME ON!</title>
+  <link rel="stylesheet" href='{% static 'css/index.css' %}' />
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-106131568-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+</head>
+
+<!-- <body background="{% static 'media/img/jarvis.jpg'%}"> -->
+<body>
+
+  <div id="container">
+
+    {% include "index/header.html" %}
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+      <!-- <a href="http://www.pyzyme.com/home" class="fill-box1"><div id="boxLeft" class='boxes1' style="background-image: url(/static/media/img/genesearchCover.png)">
+        <h3>Gene-association Search</h3>
+        <p> Search pubmed abstracts to retrive a list genes as well as authors related to the keyword.</p>
+
+      </div></a> -->
+
+      <!-- <a href="http://www.pyzyme.com/function" class="fill-box1"> -->
+      <!-- <div id="boxLeft" class="boxes1" style="background-image: url(/static/media/img/functionCover.jpg)">
+        <h3> Function Search</h3>
+        <p> Understand how gene expression modulates biological functions. Explore genetic redundencies. Work in progress...</p>
+      </div> -->
+
+
+      <!-- <a href="http://www.pyzyme.com/search" class="fill-box1"> -->
+      <!-- <div id="boxLeft" class='boxes1' style="background-image: url(/static/media/img/pathwayCover.jpg)">
+        <h3>Pathway Explorer</h3>
+        <p>Explore biochemical pathways. See in realtime how pathways work cooperatively.  Work in progress...</p>
+      </div> -->
+
+
+
+      <a href="http://www.pyzyme.com/feedback" class="fill-box1"><div id="boxRight" class="boxes" style="background-image: url(/static/media/img/feedbackCover.jpg)">
+        <h3>Feedback</h3>
+        <p>Your opinion matters!</p>
+      </div></a>
+
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+      <!-- <a href="http://www.pyzyme.com/blog" class="fill-box1"><div id="boxLeft" class="boxes" style="background-image: url(/static/media/img/blogCover.jpg)">
+        <h3>Biology/Medicine Blog</h3>
+        <p>The latest news and breakthroughs from the field of biology and medicine</p>
+      </div></a> -->
+
+      <div id="boxLeft" class="boxes" style="background-image: url(/static/media/img/brickCover.png)">
+        <h3>Brick Crush: Word Quest</h3>
+        <p>The classic brickbreaker game with a word twist!</p>
+      </div>
+
+      <div id="boxLeft" class="boxes" style="background-image: url(/static/media/img/jumbleCover.png)">
+        <h3>Word Jumble: Trivia</h3>
+        <p>Trivia game with a jumble element!</p>
+      </div>
+
+      <!-- <a href="http://www.pyzyme.com/genome_editting" class="fill-box1"> -->
+      <!-- <div id="boxBottom" class='boxes1' style="background-image: url(/static/media/img/geneeditCover.jpg)">
+        <h3>Genome Editing</h3>
+        <p>Coming soon...</p>
+      </div> -->
+
+      <div id="boxBottom" class='boxes' style="background-image: url(/static/media/img/gamesCover.jpg)">
+        <h3>Games</h3>
+        -<a href="https://play.google.com/store/apps/developer?id=Pyzyme+LLC" target="_blank">Google Play</a></p>
+        -<a href="https://itunes.apple.com/us/developer/pyzyme-llc/id1364715660" target="_blank">App Store</a></p>
+      </div>
+
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+  <!-- <a href="http://www.pyzyme.com/iholdings" class="fill-box1"><div id="boxBottom" class='boxes1' style="background-image: url(/static/media/img/institutionCover.jpg)">
+    <h3>Institutional Holdings</h3>
+    <p>Analyze US Securities and Exchange Commission 13F-HR (institutional holdings) data</p>
+  </div></a> -->
+
+  <div class="blogbox">
+    <!-- <p id="bottomstrip"><a href="http://www.pyzyme.com/home" target="_blank"> Gene-association Search</a> </p> -->
+    <!-- <p id="bottomstrip"><a href="http://www.pyzyme.com/stock" target="_blank"> Stock Analysis</a></p> -->
+    <p id="bottomstrip"><a href="https://play.google.com/store/apps/developer?id=Pyzyme+LLC" target="_blank"> Games - Android</a> </p>
+    <p id="bottomstrip"><a href="http://www.pyzyme.com/feedback" target="_blank"> About </a> </p>
+  </div>
+
+
+<div id="innerhori3">
+{% include "index/footer.html" %}
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="{% static 'js/changeOneRandomDivColor.js' %}"></script>
+  </body
+  </html>
