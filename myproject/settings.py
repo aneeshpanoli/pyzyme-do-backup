@@ -119,7 +119,7 @@ DATABASES = {
     	'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'pyzymedb',
         'USER': 'pypanoli',
-        'PASSWORD': 'padpmavath1',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
         # 'OPTIONS': {
